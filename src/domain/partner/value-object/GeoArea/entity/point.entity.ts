@@ -1,15 +1,17 @@
-import AbstractPoint from "../abstract/point.absctract";
 import { IPoint } from "../interfaces";
 
+type ICoordinates = IPoint['coordinates'];
 
 
+export class Point implements IPoint {
+    public type: string = 'MultiPolygon';
+    readonly coordinates: ICoordinates;
 
-export class Point extends AbstractPoint {
-    constructor(coordinates: IPoint['coordinates']) {
-        super(coordinates);
+    constructor(coordinates: ICoordinates) {
+        this.coordinates = coordinates;
     }
 
-    getCoordinates(): IPoint['coordinates'] {
+    getCoordinates(): ICoordinates {
         return this.coordinates;
     }
 };

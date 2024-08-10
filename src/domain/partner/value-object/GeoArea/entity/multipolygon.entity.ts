@@ -14,5 +14,4 @@ export class MultiPolygon implements IMultiPolygon {
     getCoordinates(): ICoordinates {
         return this.coordinates;
     }
-
 }
